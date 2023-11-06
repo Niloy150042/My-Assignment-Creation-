@@ -5,7 +5,7 @@ const Carts = () => {
     return (
        <div>
          <div>
-            here  
+            here  we will find carts
         </div>
         <Ourfeature></Ourfeature>
        </div>

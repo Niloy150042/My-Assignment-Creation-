@@ -40,8 +40,8 @@ const Navbar = () => {
 
 <Link to='/' ><li className="text-xl font-ubuntu font-bold " ><a>Home </a></li></Link>
 <Link to='/about' ><li className="text-xl font-ubuntu font-bold " ><a>About </a></li></Link>
-<Link to='/about' ><li className="text-xl font-ubuntu font-bold " ><a>Create Assignment </a></li></Link>
-<Link to='/about' ><li className="text-xl font-ubuntu font-bold " ><a>Created Assignment </a></li></Link>
+<Link to='/createassignment' ><li className="text-xl font-ubuntu font-bold " ><a>Create Assignment </a></li></Link>
+<Link to='/about' ><li className="text-xl font-ubuntu font-bold " ><a>My Assignments </a></li></Link>
 
     
     </>

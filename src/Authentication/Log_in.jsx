@@ -35,6 +35,16 @@ const Log_in = () => {
          const email = e.target.email.value
          const password =e.target.password.value 
 
+         if(password.length<6){
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'password cant be less then 6 character',
+            footer: '<a href="">Why do I have this issue?</a>'
+          })
+          return
+        }
+
          signIn (email,password)
 
        .then(result=>

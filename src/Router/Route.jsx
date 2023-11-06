@@ -4,6 +4,7 @@ import Register from "../Authentication/Register";
 import Log_in from "../Authentication/Log_in";
 import Banner from "../Banner/Banner";
 import Ourfeature from "../components/Ourfeature";
+import Createassignment from "../components/Createassignment";
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             path:'/',
             element:<Ourfeature></Ourfeature>
             
+         },
+         {
+            path:'/createassignment',
+            element:<Createassignment></Createassignment>
          }
        
       ]

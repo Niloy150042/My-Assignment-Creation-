@@ -15,6 +15,16 @@ const Register = () => {
     const password = e.target.password.value;
     console.log(email, photo, name, password);
 
+    if(password.length<6){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'password cant be less then 6 character',
+        footer: '<a href="">Why do I have this issue?</a>'
+      })
+      return 
+    }
+
     createuser(email, password)
       .then((result) => {
         console.log(result.user);
@@ -27,15 +37,11 @@ const Register = () => {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Something went wrong! with your registraion',
+          text: 'something went wrong to registration',
           footer: '<a href="">Why do I have this issue?</a>'
         })
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong!',
-          footer: '<a href="">Why do I have this issue?</a>'
-        })
+      
+      
         
       });
   };

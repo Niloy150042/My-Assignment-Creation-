@@ -5,7 +5,7 @@ const Carts = () => {
     return (
        <div>
          <div>
-            here all card will 
+            here all card 
         </div>
         <Ourfeature></Ourfeature>
        </div>

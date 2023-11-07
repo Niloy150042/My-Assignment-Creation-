@@ -1,8 +1,13 @@
-import e from "cors";
+import { useContext } from "react";
+import { Authcontext } from "../provider/Authprovider";
+import Swal from "sweetalert2";
+
 
 
 
 const Createassignment = () => {
+    const {user}=useContext(Authcontext)
+ 
    
     const handlesubmit =(e)=>{
         e.preventDefault()
@@ -12,8 +17,35 @@ const Createassignment = () => {
         const image =e.target.image.value
         const difficulty = e.target.difficulty.value
         const date = e.target.date.value
-        console.log(title,description,marks,image,difficulty,date);
+        const User=e.target.user.value
+    
+        const assignment ={ title,description,marks,image,difficulty,date,User}
+        console.log(assignment);
+
+        fetch('http://localhost:5000/createdassignments',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(assignment)
+        })
+        .then(res=>res.json()
         
+        )
+        .then (data=>{
+            if(data.insertedId)
+            {
+                Swal.fire(
+                    'Good job!',
+                    'Assignment created successfuly!',
+                    'success'
+                  )
+            }
+        })
+
+         
+
+
     }
 
     return (
@@ -21,6 +53,7 @@ const Createassignment = () => {
   <div className="hero-content flex-col lg:flex-row">
     
     <div className="card flex-shrink-0 lg:w-[800px] max-w-sm shadow-2xl bg-base-100">
+        <p className="text-2xl font-ubuntu font-bold text-center">please create an assignment ! </p>
       <form onSubmit={handlesubmit} className="card-body">
         <div className="form-control">
           <label className="label">
@@ -61,6 +94,15 @@ const Createassignment = () => {
  
   <label className="mt-4 font-ubuntu font-bold text-xl " > choose date: </label>
  <input type="date" name="date" id="" />
+
+ <div className="form-control">
+          <label className="label">
+            <span  className="label-text font-ubuntu font-bold text-xl">Created by :</span>
+          </label>
+          <input type="text" defaultValue={user.email} placeholder="image" name="user" className="input input-bordered" required />
+        </div>
+  
+
      
         <div className="form-control mt-6">
           <button className="btn btn-primary">Create</button>

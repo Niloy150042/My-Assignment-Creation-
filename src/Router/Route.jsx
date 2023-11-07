@@ -5,6 +5,9 @@ import Log_in from "../Authentication/Log_in";
 import Banner from "../Banner/Banner";
 import Ourfeature from "../components/Ourfeature";
 import Createassignment from "../components/Createassignment";
+import Allassignment from "../components/Allassignment";
+import Privaterounte from "../privateroute/Privaterounte";
+import Errorpage from "../components/Errorpage";
 
 
 
@@ -34,7 +37,18 @@ const router = createBrowserRouter([
          },
          {
             path:'/createassignment',
-            element:<Createassignment></Createassignment>
+            element:<Privaterounte><Createassignment></Createassignment></Privaterounte>,
+         
+         },
+         {
+            path:'/createdassignment',
+            element:<Privaterounte><Allassignment></Allassignment></Privaterounte>,
+            loader: ()=>fetch('http://localhost:5000/createdassignments')
+         },
+         {
+            path:'/*',
+            element:<Errorpage></Errorpage>
+
          }
        
       ]

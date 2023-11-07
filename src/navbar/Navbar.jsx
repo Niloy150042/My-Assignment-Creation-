@@ -3,7 +3,7 @@ import { Link} from "react-router-dom";
 import { Authcontext } from "../provider/Authprovider";
 
 import Swal from "sweetalert2";
-import Banner from "../Banner/Banner";
+
 
 
 
@@ -38,10 +38,12 @@ const Navbar = () => {
 
     const navitems = <>
 
-<Link to='/' ><li className="text-xl font-ubuntu font-bold " ><a>Home </a></li></Link>
-<Link to='/about' ><li className="text-xl font-ubuntu font-bold " ><a>About </a></li></Link>
-<Link to='/createassignment' ><li className="text-xl font-ubuntu font-bold " ><a>Create Assignment </a></li></Link>
-<Link to='/about' ><li className="text-xl font-ubuntu font-bold " ><a>My Assignments </a></li></Link>
+<Link to='/' ><li className=" font-ubuntu font-bold " ><a>Home </a></li></Link>
+<Link to='/about' ><li className=" font-ubuntu font-bold " ><a>About </a></li></Link>
+<Link to='/createassignment' ><li className=" font-ubuntu font-bold " ><a>Create Assignment </a></li></Link>
+<Link to='/createdassignment' ><li className=" font-ubuntu font-bold " ><a>Created Assignments </a></li></Link>
+<Link to='/' ><li className=" font-ubuntu font-bold " ><a>All Assignments </a></li></Link>
+
 
     
     </>
@@ -74,6 +76,9 @@ const Navbar = () => {
        
          {
           user?<button onClick={handlelogout} className="btn btn-accent" > Log-out</button> : <Link to='/login' ><a className="btn btn-success ">Log-in</a></Link>
+         }
+         {
+          user?<img className="h-[40px] rounded-full" src="/src/picture/niloy profile pic.jpg"></img>:<img src="https://i.ibb.co/s9mBpPh/download-3.jpg" className="h-[50px]"></img>
          }
       
 

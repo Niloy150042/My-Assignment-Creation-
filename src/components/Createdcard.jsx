@@ -41,6 +41,12 @@ const Createdcard = ({assignment ,assignments,setassignments}) => {
            }
           
         }
+
+        // Updating operation 
+
+        const handleupdate =()=>{
+            
+        }
     
    
     return (

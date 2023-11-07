@@ -8,6 +8,7 @@ import Createassignment from "../components/Createassignment";
 import Allassignment from "../components/Allassignment";
 import Privaterounte from "../privateroute/Privaterounte";
 import Errorpage from "../components/Errorpage";
+import Updatedassignment from "../components/Updatedassignment";
 
 
 
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
             path:'/*',
             element:<Errorpage></Errorpage>
 
+         },
+         {
+            path:'/updatedassignment/:id',
+            element:<Updatedassignment></Updatedassignment>,
+            loader:({params})=>fetch(`http://localhost:5000/createdassignments/${params.id}`)
          }
        
       ]

@@ -9,7 +9,7 @@ const Createdcard = ({assignment ,assignments,setassignments}) => {
     const {title,image,_id,description,User}=assignment
 
    
-
+        //     deleting operation 
         const handledelete =_id=>{
         
            if(user.email==User){
@@ -52,7 +52,7 @@ const Createdcard = ({assignment ,assignments,setassignments}) => {
    <p>created by {User}</p>
     <div className="card-actions justify-end">
       <button onClick={()=>handledelete(_id)} className="btn btn-accent">Delete</button>
-      <button className="btn btn-accent">Update</button>
+      <button onClick={handleupdate} className="btn btn-accent">Update</button>
     </div>
   </div>
 </div>

@@ -59,7 +59,7 @@ const Createdcard = ({assignment ,assignments,setassignments}) => {
    <p>created by {User}</p>
     <div className="card-actions justify-end">
       <button onClick={()=>handledelete(_id)} className="btn btn-accent">Delete</button>
-      <Link to={`updatedassignment/${_id}`} ><button  className="btn btn-accent">Update</button></Link>
+      <Link to={`/updatedassignment/${_id}`} ><button  className="btn btn-accent">Update</button></Link>
     </div>
   </div>
 </div>

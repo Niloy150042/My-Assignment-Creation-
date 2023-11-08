@@ -51,9 +51,9 @@ const Createdcard = ({assignment ,assignments,setassignments}) => {
         <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img className="h-[200px] w-[380px]" src={image} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">{title}</h2>
-    <p>{description}</p>
-   <p>created by {User}</p>
+    <h2 className="card-title font-ubuntu font-bold "> Title: {title}</h2>
+    <p className="font-ubuntu" >{description}</p>
+   <p className="font-ubuntu font-semibold " >created by {User}</p>
     <div className="card-actions justify-end">
       <button onClick={()=>handledelete(_id)} className="btn btn-accent">Delete</button>
      

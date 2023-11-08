@@ -39,7 +39,6 @@ const Navbar = () => {
     const navitems = <>
 
 <Link to='/' ><li className=" font-ubuntu font-bold " ><a>Home </a></li></Link>
-<Link to='/about' ><li className=" font-ubuntu font-bold " ><a>About </a></li></Link>
 <Link to='/createassignment' ><li className=" font-ubuntu font-bold " ><a>Create Assignment </a></li></Link>
 <Link to='/createdassignment' ><li className=" font-ubuntu font-bold " ><a>Created Assignments </a></li></Link>
 <Link to='/allassignment' ><li className=" font-ubuntu font-bold " ><a>All Assignments </a></li></Link>
@@ -62,7 +61,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center">
             <img className="h-[50px] rounded-se-2xl" src="https://i.ibb.co/nzHPCbL/righting-check-logo-design-template-7dc687a42c30ed98e888feaa3e67f8a4-screen.jpg" alt="" />
-          <a className="btn btn-ghost normal-case text-3xl font-Lobstar ">Tenasine</a> 
+          <p className=" ml-3 font-bold  normal-case text-4xl font-Lobstar ">Tenasine</p> 
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

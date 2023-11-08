@@ -2,6 +2,7 @@ import { GrGroup } from "react-icons/Gr";
 import { VscDebugBreakpointFunctionUnverified } from "react-icons/Vsc";
 import { MdAssignmentInd } from "react-icons/Md";
 import { BiAlarmExclamation } from "react-icons/Bi";
+import Faqsection from "./Faqsection";
 
 const Ourfeature = () => {
   return (
@@ -40,6 +41,7 @@ const Ourfeature = () => {
             <p>Wonderful time management you will have and explore</p>
         </div>
       </div>
+      <Faqsection></Faqsection>
     </div>
   );
 };

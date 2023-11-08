@@ -20,9 +20,9 @@ const Detailsassignment = () => {
             <div className="card bg-base-100 shadow-xl">
             <figure><img className="h-[500px]" src={picture} alt="Shoes" /></figure>
             <div className="card-body">
-              <h2 className="card-title">{title}</h2>
-              <p>Marks :{marks}</p>
-              <p>Difficulty :{difficulty}</p>
+              <h2 className="card-title font-ubuntu  "> Title: {title}</h2>
+              <p className="font-ubuntu" >Marks :{marks}</p>
+              <p className="font-ubuntu font-semibold" >Difficulty :{difficulty}</p>
               <div className="card-actions justify-end">
                 <button className="btn btn-accent">Take assignment</button>
               </div>

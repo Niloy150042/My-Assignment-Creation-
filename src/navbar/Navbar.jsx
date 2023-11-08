@@ -37,7 +37,7 @@ const Navbar = () => {
     })
   }
 
-    const navitems = <>
+const navitems = <>
 
 <Link to='/' ><li className=" font-ubuntu font-bold " ><a>Home </a></li></Link>
 <Link to='/createassignment' ><li className=" font-ubuntu font-bold " ><a>Create Assignment </a></li></Link>

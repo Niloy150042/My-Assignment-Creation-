@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData,  useParams } from "react-router-dom";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 const Detailsassignment = () => {
+  useEffect(()=>{
+    Aos.init({duration:3000})
+  },[])
     const [assignment,setassignment]=useState([])
     const details= useLoaderData()
     const {_id} =useParams()

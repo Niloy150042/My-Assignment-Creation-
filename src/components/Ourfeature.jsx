@@ -3,11 +3,18 @@ import { VscDebugBreakpointFunctionUnverified } from "react-icons/Vsc";
 import { MdAssignmentInd } from "react-icons/Md";
 import { BiAlarmExclamation } from "react-icons/Bi";
 import Faqsection from "./Faqsection";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Ourfeature = () => {
+  useEffect(()=>{
+    Aos.init({duration:3000})
+
+  },[])
   return (
     <div>
-      <div className="text-center">
+      <div className="text-center" data-aos="fade-down">
         <p className="font-ubuntu text-3xl ">Our features</p>
         <div>
           <p className="text-xl text-cyan-500 font-Lobstar ">

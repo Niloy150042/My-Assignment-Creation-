@@ -3,6 +3,7 @@ import { Link} from "react-router-dom";
 import { Authcontext } from "../provider/Authprovider";
 
 import Swal from "sweetalert2";
+import picture from  "./niloy_profile_pic.jpg"
 
 
 
@@ -78,8 +79,9 @@ const Navbar = () => {
          {
           user?<button onClick={handlelogout} className="btn btn-accent" > Log-out</button> : <Link to='/login' ><a className="btn btn-success ">Log-in</a></Link>
          }
+
          {
-          user?<img className="h-[40px] rounded-full" src="/src/navbar/niloy profile pic.jpg"></img>:<img src="https://i.ibb.co/s9mBpPh/download-3.jpg" className="h-[50px]"></img>
+          user?<img className="h-[40px] rounded-full" src={picture}></img>:<img src="https://i.ibb.co/s9mBpPh/download-3.jpg" className="h-[50px]"></img>
 
          }
       

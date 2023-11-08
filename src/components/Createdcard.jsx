@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { Authcontext } from "../provider/Authprovider";
-import { Link } from "react-router-dom";
 
 
 const Createdcard = ({assignment ,assignments,setassignments}) => {
@@ -45,21 +44,19 @@ const Createdcard = ({assignment ,assignments,setassignments}) => {
 
         // Updating operation 
 
-        const handleupdate =()=>{
-
-        }
+      
     
    
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src={image} alt="Shoes" /></figure>
+  <figure><img className="h-[200px] w-[380px]" src={image} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{title}</h2>
     <p>{description}</p>
    <p>created by {User}</p>
     <div className="card-actions justify-end">
       <button onClick={()=>handledelete(_id)} className="btn btn-accent">Delete</button>
-      <Link to={`/updatedassignment/${_id}`} ><button  className="btn btn-accent">Update</button></Link>
+     
     </div>
   </div>
 </div>

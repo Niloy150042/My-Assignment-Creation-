@@ -42,7 +42,7 @@ const Navbar = () => {
 <Link to='/about' ><li className=" font-ubuntu font-bold " ><a>About </a></li></Link>
 <Link to='/createassignment' ><li className=" font-ubuntu font-bold " ><a>Create Assignment </a></li></Link>
 <Link to='/createdassignment' ><li className=" font-ubuntu font-bold " ><a>Created Assignments </a></li></Link>
-<Link to='/' ><li className=" font-ubuntu font-bold " ><a>All Assignments </a></li></Link>
+<Link to='/allassignment' ><li className=" font-ubuntu font-bold " ><a>All Assignments </a></li></Link>
 
 
     

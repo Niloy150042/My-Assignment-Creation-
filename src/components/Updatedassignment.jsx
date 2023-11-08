@@ -4,23 +4,27 @@ import Swal from "sweetalert2";
 
 const Updatedassignment = () => {
     const assignments =useLoaderData()
-    const {title,_id ,description , marks , image , difficulty, date,User}=assignments
+
+    const {title, marks , picture,_id , difficulty,}=assignments
+
   
 
-    const handleupdate =(e)=>{
+    const handleupdate = (e)=>{
+     
+         
         e.preventDefault()
-        const title =e.target.title.value
-        const description =e.target.description.value
-        const marks =e.target.marks.value
-        const image =e.target.image.value
-        const difficulty = e.target.difficulty.value
-        const date = e.target.date.value
-        const User=e.target.user.value
+        const title = e.target.title.value;
+        const marks =e.target.marks.value;
+        const image =e.target.image.value;
+        const difficulty = e.target.difficulty.value;
+        const date = e.target.date.value;
+        const User=e.target.user.value;
+   
     
-        const updatedassignment ={ title,description,marks,image,difficulty,date,User}
-        console.log(updatedassignment);
+        const updatedassignment = { title,marks,image,difficulty,date,User}
+        
 
-        fetch(`http://localhost:5000/createdassignments1/${_id}`,{
+        fetch(`http://localhost:5000/allassignment/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
@@ -31,7 +35,7 @@ const Updatedassignment = () => {
         
         )
         .then (data=>{
-            if(data.insertedId)
+            if(data.modifiedCount>0)
             {
                 Swal.fire(
                     'Good job!',
@@ -56,20 +60,14 @@ const Updatedassignment = () => {
           
           <div className="card flex-shrink-0 lg:w-[800px] max-w-sm shadow-2xl bg-base-100">
               <p className="text-2xl font-ubuntu font-bold text-center">please Update Your assignment ! </p>
-            <form className="card-body">
+            <form onSubmit={handleupdate} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span  className="label-text font-ubuntu font-bold text-xl">Title :</span>
                 </label>
                 <input  name="title"  defaultValue={title}  type="text" placeholder="Title" className="input input-bordered" required />
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text  font-ubuntu font-bold text-xl ">Description :</span>
-                </label>
-                
-                <textarea className="border border-black rounded" name="description" id="" defaultValue={description} cols="10" rows="2"></textarea>
-              </div>
+           
       
               <div className="form-control">
                 <label className="label">
@@ -82,7 +80,7 @@ const Updatedassignment = () => {
                 <label className="label">
                   <span className="label-text font-ubuntu font-bold text-xl ">Image URL: </span>
                 </label>
-                <input type="text" placeholder="image" name="image" className="input input-bordered" defaultValue={image} required />
+                <input type="text" defaultValue={picture} placeholder="image" name="image" className="input input-bordered" required />
                 
               </div>
             
@@ -95,19 +93,19 @@ const Updatedassignment = () => {
       </select>
        
         <label className="mt-4 font-ubuntu font-bold text-xl " > choose date: </label>
-       <input type="date" defaultValue={date} name="date" id="" />
+       <input type="date"  name="date" id="" />
       
        <div className="form-control">
                 <label className="label">
                   <span  className="label-text font-ubuntu font-bold text-xl">Created by :</span>
                 </label>
-                <input type="text" defaultValue={User} placeholder="image" name="user" className="input input-bordered" required />
+                <input type="text"  placeholder="User" name="user" className="input input-bordered" required />
               </div>
         
       
            
               <div className="form-control mt-6">
-                <button onClick={handleupdate} className="btn btn-primary">Update </button>
+                <button  className="btn btn-primary">Update </button>
               </div>
             </form>
           </div>

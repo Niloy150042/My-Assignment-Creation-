@@ -9,6 +9,8 @@ import Allassignment from "../components/Allassignment";
 import Privaterounte from "../privateroute/Privaterounte";
 import Errorpage from "../components/Errorpage";
 import Updatedassignment from "../components/Updatedassignment";
+import Allassignments from "../components/Allassignments";
+import Detailsassignment from "../components/Detailsassignment";
 
 
 
@@ -53,8 +55,18 @@ const router = createBrowserRouter([
          },
          {
             path:'/updatedassignment/:id',
-            element:<Updatedassignment></Updatedassignment>,
-            loader:({params})=>fetch(`http://localhost:5000/createdassignments/${params.id}`)
+            element:<Privaterounte><Updatedassignment></Updatedassignment></Privaterounte>,
+            loader:({params})=>fetch(`http://localhost:5000/allassignment/${params.id}`)
+         },
+         {
+            path:'/allassignment',
+            element:<Allassignments></Allassignments>,
+            loader :()=>fetch('http://localhost:5000/allassignment')
+         },
+         {
+            path:'/assignmentdetails/:_id',
+            element:<Detailsassignment></Detailsassignment>,
+            loader:()=>fetch('http://localhost:5000/allassignment')
          }
        
       ]

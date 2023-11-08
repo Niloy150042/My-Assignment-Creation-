@@ -42,6 +42,8 @@ const Navbar = () => {
 <Link to='/createassignment' ><li className=" font-ubuntu font-bold " ><a>Create Assignment </a></li></Link>
 <Link to='/createdassignment' ><li className=" font-ubuntu font-bold " ><a>Created Assignments </a></li></Link>
 <Link to='/allassignment' ><li className=" font-ubuntu font-bold " ><a>All Assignments </a></li></Link>
+<Link to='/myassignment' ><li className=" font-ubuntu font-bold " ><a>My Assignments </a></li></Link>
+
 
 
     
@@ -77,7 +79,8 @@ const Navbar = () => {
           user?<button onClick={handlelogout} className="btn btn-accent" > Log-out</button> : <Link to='/login' ><a className="btn btn-success ">Log-in</a></Link>
          }
          {
-          user?<img className="h-[40px] rounded-full" src="/src/picture/niloy profile pic.jpg"></img>:<img src="https://i.ibb.co/s9mBpPh/download-3.jpg" className="h-[50px]"></img>
+          user?<img className="h-[40px] rounded-full" src="/src/navbar/niloy profile pic.jpg"></img>:<img src="https://i.ibb.co/s9mBpPh/download-3.jpg" className="h-[50px]"></img>
+
          }
       
 

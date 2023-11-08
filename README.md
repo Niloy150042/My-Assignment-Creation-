@@ -1,8 +1,9 @@
-# React + Vite
+#client side link :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Project features :
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- This project has the scope for creating the assignment
+- this project has the all assignment part in which user will see all assignment
+- this have the update and view assigment options
+- This project have awesome responsiveness
+- User can easily update any assignment easily .

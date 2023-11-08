@@ -34,6 +34,22 @@ const Log_in = () => {
          e.preventDefault()
          const email = e.target.email.value
          const password =e.target.password.value 
+         if (/[A-Z]/.test(password)) {
+          Swal.fire(
+            'wrong !',
+            'password should not be uppercase  character',
+            'error'
+          )
+          return ;
+        }
+        if (/[!@#$%^&*]/.test(password)) {
+          Swal.fire(
+            'wrong !',
+            'password should not be special  character',
+            'error'
+          )
+          return ;
+        }
 
          if(password.length<6){
           Swal.fire({

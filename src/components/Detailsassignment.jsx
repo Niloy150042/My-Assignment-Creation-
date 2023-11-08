@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData,  useParams } from "react-router-dom";
+import { Link, useLoaderData,  useParams } from "react-router-dom";
 
 
 const Detailsassignment = () => {
@@ -24,7 +24,7 @@ const Detailsassignment = () => {
               <p className="font-ubuntu" >Marks :{marks}</p>
               <p className="font-ubuntu font-semibold" >Difficulty :{difficulty}</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-accent">Take assignment</button>
+          <Link to={`/myassignment`}>      <button className="btn btn-accent">Take assignment</button></Link>
               </div>
             </div>
           </div>

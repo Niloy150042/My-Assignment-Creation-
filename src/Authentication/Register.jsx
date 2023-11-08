@@ -22,6 +22,28 @@ const Register = () => {
         text: 'password cant be less then 6 character',
         footer: '<a href="">Why do I have this issue?</a>'
       })
+     
+
+      if (/[A-Z]/.test(password)) {
+        Swal.fire(
+          'wrong !',
+          'password should not be uppercase  character',
+          'error'
+        )
+        return ;
+      }
+      if (/[!@#$%^&*]/.test(password)) {
+        Swal.fire(
+          'wrong !',
+          'password should not be special  character',
+          'error'
+        )
+        return ;
+      }
+
+
+       
+
       return 
     }
 

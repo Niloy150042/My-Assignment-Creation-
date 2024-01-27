@@ -22,7 +22,7 @@ const Carts = () => {
        <div >
         <p data-aos="fade-up"  className="text-center font-Lobstar mt-6 text-4xl "> our assignment example</p>
         
-         <div className="grid lg:grid-cols-3 gap-4 py-10 "data-aos="fade-up" >
+         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 md:gap-5 py-10 "data-aos="fade-up" >
             
              {
                 
